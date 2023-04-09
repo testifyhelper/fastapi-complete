@@ -21,8 +21,8 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd ~
-          pwd
+          rm -rf fastapi-complete
           git clone https://github.com/testifyhelper/fastapi-complete.git
-          cd fastapi-docker
+          cd fastapi-complete
           docker-compose down
           docker-compose up -d
