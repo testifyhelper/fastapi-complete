@@ -2,13 +2,12 @@ version: "3"
 services:
   api:
     build: .
-    command: bash -c "alembic upgrade head && uvicorn main:app --host=fastapinaveen.me --port=443"
+    command: bash -c "alembic upgrade head; tail -f /dev/null"
+    tty: true
     ports:
       - 80
     volumes:
       - ./:/usr/src/app
-    # env_file:
-    #     - ./.env
     environment:
       - DATABASE_HOSTNAME=fastapinaveen.me
       - DATABASE_PORT=${DATABASE_PORT}
