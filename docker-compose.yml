@@ -2,7 +2,7 @@ version: "3"
 services:
   api:
     build: .
-    command: bash -c "alembic upgrade head && uvicorn main:app"
+    command: bash -c "alembic upgrade head && uvicorn main:app --host=fastapinaveen.me --port=443"
     ports:
       - 80
     volumes:
