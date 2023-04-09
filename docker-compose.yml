@@ -3,7 +3,6 @@ services:
   api:
     build: .
     command: bash -c "alembic upgrade head; tail -f /dev/null"
-    tty: true
     ports:
       - 80
     volumes:
