@@ -22,7 +22,7 @@ jobs:
         script: |
           cd ~
           pwd
-          git clone https://github.com/testifyhelper/fastapi-docker.git
+          git clone https://github.com/testifyhelper/fastapi-complete.git
           cd fastapi-docker
           docker-compose down
           docker-compose up -d
