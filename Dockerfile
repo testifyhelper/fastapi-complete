@@ -1,4 +1,4 @@
-FROM tiangolo/uvicorn-gunicorn:python3.8-slim
+FROM tiangolo/uvicorn-gunicorn:python3.11-slim
 
 RUN apt-get update && apt-get install -y netcat
 
