@@ -21,8 +21,8 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd ~
-          sudo apt-get install libpq-dev python-dev
           rm -rf fastapi-complete
+          docker rmi -f $(docker images -aq)
           git clone https://github.com/testifyhelper/fastapi-complete.git
           cd fastapi-complete
           docker-compose down
